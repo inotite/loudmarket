@@ -1,0 +1,28 @@
+{
+  "name": "loudmarket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "clean": "rimraf ./build/",
+    "compile": "truffle compile",
+    "migrate:testnet": "npm run clean && npm run compile && truffle migrate --network testnet",
+    "verify:testnet": "truffle run verify LoudMarket@0xcEAB57AE061f7d6B634B34efc2568804f5124AC3 --network testnet"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.4.1",
+    "@truffle/hdwallet-provider": "^2.0.0",
+    "@uniswap/v2-core": "^1.0.1",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "truffle-plugin-verify": "^0.5.20"
+  }
+}
